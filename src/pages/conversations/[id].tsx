@@ -10,14 +10,14 @@ const ConversationDetail: NextPage = () => {
   if (!id) return <p>Loading...</p>
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/4 border-r">
+    <div className="flex h-screen bg-gray-50">
+      <div className="w-64 border-r bg-white">
         <Link href="/conversations" className="block p-4 text-blue-500 hover:bg-gray-100">
           ← Back to conversations
         </Link>
       </div>
       <div className="flex-1 flex flex-col">
-        <h1 className="p-4 border-b text-xl font-bold">Conversation {id}</h1>
+        <h1 className="p-4 border-b text-xl font-bold bg-white">Conversation {id}</h1>
         <MessagesList conversationId={Number(id)} />
       </div>
     </div>

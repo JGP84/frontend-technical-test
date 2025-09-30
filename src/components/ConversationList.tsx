@@ -8,7 +8,7 @@ export default function ConversationList() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch('http://localhost:3001/conversations')
+    fetch('http://localhost:3005/conversations')
       .then(res => {
         if (!res.ok) throw new Error('Failed to load conversations')
         return res.json()

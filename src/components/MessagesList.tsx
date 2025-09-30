@@ -14,7 +14,7 @@ export default function MessagesList({ conversationId }: Props) {
   const userId = getLoggedUserId()
 
   useEffect(() => {
-    fetch(`http://localhost:3001/messages?conversationId=${conversationId}`)
+    fetch(`http://localhost:3005/messages?conversationId=${conversationId}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load messages')
         return res.json()
