@@ -37,9 +37,9 @@ export default function ConversationList() {
   }
 
   return (
-    <div className="max-w-md mx-auto">
-      <h1 className="text-2xl font-bold mb-4 p-4">Conversations</h1>
-      <div className="space-y-0">
+    <div className="max-w-2xl mx-auto pt-16">
+      <h1 className="text-2xl font-bold p-4">Conversations</h1>
+      <div>
         {conversations.map(conversation => (
           <ConversationItem key={conversation.id} conversation={conversation} />
         ))}

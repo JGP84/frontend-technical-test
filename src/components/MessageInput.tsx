@@ -40,7 +40,7 @@ export default function MessageInput({ conversationId, onSend }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border-t bg-white">
+    <form onSubmit={handleSubmit} className="fixed bottom-0 md:left-64 left-0 right-0 p-4 border-t bg-white">
       <div className="flex space-x-2">
         <textarea
           value={text}

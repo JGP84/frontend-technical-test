@@ -6,25 +6,28 @@ import MessageInput from '../../components/MessageInput'
 import Link from 'next/link'
 
 const ConversationDetail: NextPage = () => {
-  const router = useRouter()
-  const { id } = router.query
+  const { id } = useRouter().query
   const [refreshKey, setRefreshKey] = useState(0)
 
   if (!id) return <p>Loading...</p>
 
   return (
-    <div className="flex h-screen bg-gray-50">
-      <div className="w-64 border-r bg-white">
+    <>
+      <aside className="fixed top-16 left-0 w-64 h-full bg-white border-r md:block hidden">
         <Link href="/conversations" className="block p-4 text-blue-500 hover:bg-gray-100">
           ← Back to conversations
         </Link>
-      </div>
-      <div className="flex-1 flex flex-col">
-        <h1 className="p-4 border-b text-xl font-bold bg-white">Conversation {id}</h1>
+      </aside>
+
+      <header className="fixed top-16 md:left-64 left-0 right-0 p-4 bg-white border-b">
+        Conversation {id}
+      </header>
+
+      <main className="pt-32 md:ml-64">
         <MessagesList key={refreshKey} conversationId={Number(id)} />
-        <MessageInput conversationId={Number(id)} onSend={() => setRefreshKey(prev => prev + 1)} />
-      </div>
-    </div>
+        <MessageInput conversationId={Number(id)} onSend={() => setRefreshKey(k => k + 1)} />
+      </main>
+    </>
   )
 }
 
