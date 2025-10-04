@@ -22,7 +22,9 @@ export default function MessageInput({ conversationId, onSend }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           body: text.trim(),
-          timestamp: Date.now()
+          timestamp: Date.now(),
+          authorId: userId,
+          conversationId: conversationId
         })
       })
 
@@ -43,6 +45,14 @@ export default function MessageInput({ conversationId, onSend }: Props) {
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault()
+              if (text.trim()) {
+                handleSubmit(e)
+              }
+            }
+          }}
           placeholder="Type your message..."
           className="flex-1 p-2 border rounded resize-none"
           rows={2}

@@ -5,15 +5,17 @@ import { getLoggedUserId } from '../utils/getLoggedUserId'
 
 interface Props {
   conversationId: number
+  refreshKey?: number
 }
 
-export default function MessagesList({ conversationId }: Props) {
+export default function MessagesList({ conversationId, refreshKey }: Props) {
   const [messages, setMessages] = useState<Message[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const userId = getLoggedUserId()
 
   useEffect(() => {
+    setLoading(true)
     fetch(`http://localhost:3005/messages?conversationId=${conversationId}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to load messages')
@@ -27,7 +29,7 @@ export default function MessagesList({ conversationId }: Props) {
         setError(err.message)
         setLoading(false)
       })
-  }, [conversationId])
+  }, [conversationId, refreshKey])
 
   if (loading) {
     return (
