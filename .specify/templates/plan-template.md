@@ -31,7 +31,18 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+**Core Principle Gates:**
+- **KISS (Keep It Simple)**: Feature must solve the problem with minimal complexity. Justify any complexity > simple solution.
+- **Clean Code**: Implementation must follow TypeScript/React conventions with clear, maintainable structure.
+- **Simplicity by Design**: User interface must prioritize clarity and intuitive interactions.
+- **Universal Accessibility**: All user interactions must meet WCAG 2.1 AA standards with keyboard navigation and screen reader support.
+- **Delightful UX**: Performance impact must be justified; sub-second response times required for user actions.
+
+**Technical Standards Gates:**
+- Next.js 15+ with Pages Router architecture
+- Mobile (320px+) and desktop (1920px+) responsive design
+- Core Web Vitals targets: LCP < 2.5s, FID < 100ms, CLS < 0.1
+- Input validation and error handling for all user inputs
 
 ## Project Structure
 
