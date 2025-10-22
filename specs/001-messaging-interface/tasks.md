@@ -24,9 +24,9 @@
 
 **Goal**: Display conversations list
 
-- [ ] T003 [US1] Create ConversationsList component with API integration
+- [ ] T003 [US1] Create ConversationsList component with API integration, handling API errors
 
-**Checkpoint**: Can see list of conversations
+**Checkpoint**: Can see list of conversations, with errors displayed gracefully
 
 ---
 
@@ -34,9 +34,9 @@
 
 **Goal**: Read messages in selected conversation
 
-- [ ] T004 [US2] Create ConversationView component with message display
+- [ ] T004 [US2] Create ConversationView component with message display, handling API errors
 
-**Checkpoint**: Can select conversation and read messages
+**Checkpoint**: Can select conversation and read messages, with errors displayed gracefully
 
 ---
 
@@ -44,9 +44,9 @@
 
 **Goal**: Send new messages
 
-- [ ] T005 [US3] Create MessageInput component with send functionality
+- [ ] T005 [US3] Create MessageInput component with send functionality, handling API errors
 
-**Checkpoint**: Can type and send messages
+**Checkpoint**: Can type and send messages, with errors displayed gracefully
 
 ---
 
@@ -58,36 +58,9 @@
 
 ---
 
-## Dependencies & Execution Order
-
-### Core Dependencies
-- **Phase 1**: Complete before features
-- **US1 → US2 → US3**: Sequential implementation
-- **Phase 3**: Final polish after core features work
-
-### Parallel Opportunities
-- Setup tasks can run in parallel
-- Polish tasks can run in parallel
-
----
-
-## Implementation Strategy
-
-### Minimal KISS Approach
-1. Phase 1: Setup (30 minutes)
-2. US1: Conversations List (1 hour)
-3. US2: View Messages (1 hour)
-4. US3: Send Messages (1 hour)
-5. Phase 3: Polish (30 minutes)
-
-**Total: 3.5-4 hours**
-
-**Note**: Error handling is integrated into each feature implementation rather than as a separate phase.
-
----
-
 ## Notes
 
 - Strictly essential tasks only
 - No redundant or extra steps
-- Core functionality focus
+- Core functionality focus: US1–US3 implemented
+- US4 ("Create Conversations") and advanced features are out-of-scope for this technical test
