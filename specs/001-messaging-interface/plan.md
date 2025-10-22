@@ -7,6 +7,27 @@
 
 Build a simple responsive messaging interface for leboncoin using Next.js with TypeScript and Tailwind CSS. Core features: list conversations, view messages, send messages, handle API errors. The interface must remain accessible and keyboard-friendly across all devices. Simple fetch-based API integration with basic error handling and mobile-responsive design following KISS principles.
 
+## Out-of-Scope Features
+
+**Purpose**: Document advanced features not included in this technical test implementation for future reference.
+
+### User Stories Out-of-Scope
+- **US4: Create New Conversations** (P2) - New conversation creation with user search and selection
+- **US5: Advanced Error Handling** (P2) - Complex retry logic, offline queuing, advanced server error management
+
+### Functional Requirements Out-of-Scope
+- **FR-004**: Create new conversations with other users
+- **FR-008**: Message status indicators (sending, sent, failed)
+- **FR-009**: Offline caching for conversations and messages
+- **FR-010**: Rate limiting for spam prevention (maximum 10 messages per minute per user)
+
+### Success Criteria Out-of-Scope
+- **SC-001**: Sub-2-second loading on 3G connections (performance metric)
+- **SC-002**: 99.9% message delivery success rate (advanced reliability metric)
+- **SC-004**: Offline functionality during server outages (advanced caching)
+
+**Rationale**: These features represent P2/P3 priorities that extend beyond the technical test scope. Core messaging functionality (US1-US3) provides complete user value for evaluation purposes.
+
 ## Technical Context
 
 **Language/Version**: TypeScript 5.8.2, React 19.0.0, Next.js 15.2.2

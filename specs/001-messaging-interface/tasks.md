@@ -50,21 +50,11 @@
 
 ---
 
-### User Story 4 - Handle API Errors (Priority: P2)
-
-**Goal**: Show errors for API failures
-
-- [ ] T006 [US4] Add error handling to components
-
-**Checkpoint**: App shows errors gracefully
-
----
-
 ## Phase 3: Polish
 
 **Purpose**: Essential responsive layout and accessibility
 
-- [ ] T007 [P] Add responsive layout and basic accessibility
+- [ ] T006 [P] Add responsive layout and basic accessibility
 
 ---
 
@@ -73,8 +63,7 @@
 ### Core Dependencies
 - **Phase 1**: Complete before features
 - **US1 → US2 → US3**: Sequential implementation
-- **US4**: Add to any feature
-- **Phase 3**: Final polish
+- **Phase 3**: Final polish after core features work
 
 ### Parallel Opportunities
 - Setup tasks can run in parallel
@@ -89,10 +78,11 @@
 2. US1: Conversations List (1 hour)
 3. US2: View Messages (1 hour)
 4. US3: Send Messages (1 hour)
-5. US4: Error Handling (30 minutes)
-6. Phase 3: Polish (30 minutes)
+5. Phase 3: Polish (30 minutes)
 
-**Total: 4-5 hours**
+**Total: 3.5-4 hours**
+
+**Note**: Error handling is integrated into each feature implementation rather than as a separate phase.
 
 ---
 
