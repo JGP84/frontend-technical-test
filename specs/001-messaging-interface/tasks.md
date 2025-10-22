@@ -11,8 +11,8 @@
 
 **Purpose**: Minimal setup for immediate development
 
-- [ ] T001 [P] Configure Next.js with TypeScript and Tailwind CSS
-- [ ] T002 Create basic API client and types
+- [ ] T001 [P] Configure Tailwind CSS for styling
+- [ ] T002 Create basic API client and TypeScript types
 
 ---
 
