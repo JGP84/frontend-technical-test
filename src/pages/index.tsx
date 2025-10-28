@@ -1,65 +1,31 @@
 import type { ReactElement } from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
-import Logo from '../assets/lbc-logo.webp'
-import styles from '../styles/Home.module.css'
 
 export default function Home(): ReactElement {
-  const year = new Date().getFullYear()
-
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Frontend Technical test - Leboncoin</title>
-        <meta name="description" content="Frontend exercise for developpers who want to join us on leboncoin.fr" />
-      </Head>
-
-      <main className={styles.main}>
-        <Image src={Logo} alt="Leboncoin Frontend Team" width={400} height={125} priority />
-        <h1 className={styles.title}>
-          Welcome !
-        </h1>
-
-        <p className={styles.description}>
-          This test is based on a <a title="Next.js documentation" href="https://nextjs.org/docs/getting-started" target="_blank" rel="noopener noreferrer">Next.js</a> application.<br />
-          Fork the repository and use the <code className={styles.code}>main</code> branch as your starting point.
-          <br /><br />
-
-          Get started by reading{' '}
-          <code className={styles.code}>README.md</code> and editing <code className={styles.code}>src/pages/index.js</code>
-          <br />
-          Once you are done, send the repository link to your HR contact.
-        </p>
-
-        <div className={styles.grid}>
-          <article className={styles.card}>
-            <h2>Design</h2>
-            <p>Feel free to create any design you want for this exercise. Let your creativity talks !</p>
-          </article>
-
-          <article className={styles.card}>
-            <h2>Libraries</h2>
-            <p>Feel free to use any library you want. Only Next.js / React are required.</p>
-          </article>
-
-          <article className={styles.card}>
-            <h2>API Server</h2>
-            <p>
-              Start the API server on port <code className={styles.code}>3005</code> by running<br /><code className={styles.code}>npm run start-server</code>.<br/>
-              Find the swagger definitions in <code className={styles.code}>docs/api-swagger.yml</code> or <a title="API Swagger documentation" href="https://leboncoin.tech/frontend-technical-test/" target="_blank" rel="noopener noreferrer">the online documentation</a>.
-            </p>
-          </article>
-
-          <article className={styles.card}>
-            <h2>Timing</h2>
-            <p>We recommend 4 hours for this test. You are free to spend more (or less) time, let us know how much time did you spend.</p>
-          </article>
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
+      <div className="max-w-lg w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6">
+          <h1 className="text-2xl font-bold text-white text-center">
+            🎉 Tailwind CSS Works!
+          </h1>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        &copy; leboncoin - {year}
-      </footer>
+        <div className="p-8">
+          <div className="text-center">
+            <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              ✅ Success
+            </div>
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+              Hello World!
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Tailwind CSS is properly configured and working. You can see the beautiful styling applied to this card.
+            </p>
+            <button className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
