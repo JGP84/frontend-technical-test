@@ -2,7 +2,11 @@ import { useEffect, useState, useCallback } from 'react'
 import { fetchConversations } from './fetchConversations'
 import type { Conversation } from '../types/conversation'
 
-export default function ConversationsList() {
+interface ConversationsListProps {
+  onSelectConversation: (conversation: Conversation) => void
+}
+
+export default function ConversationsList({ onSelectConversation }: ConversationsListProps) {
   const [conversations, setConversations] = useState<Conversation[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -61,10 +65,7 @@ export default function ConversationsList() {
         <div
           key={conversation.id}
           className="p-4 hover:bg-gray-50 cursor-pointer"
-          onClick={() => {
-            // TODO: Navigate to conversation view
-            console.log('Selected conversation:', conversation.id)
-          }}
+          onClick={() => onSelectConversation(conversation)}
         >
           <div className="flex justify-between items-start">
             <div className="flex-1">
